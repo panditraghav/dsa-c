@@ -21,11 +21,11 @@ void extract_digit(int num) {
  * How many times the loop is running!
  * Time Complexity: log10(N)
  */
-void count_number_of_digits(int num) {
+int count_number_of_digits(int num) {
   printf("Digit: %d\n", num);
   if (num == 0) {
     printf("Count: 0\n");
-    return;
+    return 0;
   }
   int count = 0;
   while (num > 0) {
@@ -33,16 +33,17 @@ void count_number_of_digits(int num) {
     count++;
   }
   printf("Count: %d\n", count);
+  return count;
 }
 
-void reverse_number(int num) {
+int reverse_number(int num) {
   printf("Digit: %d\n", num);
 
   int reversed = 0;
 
   if (num == 0) {
     printf("Reversed: %d\n", reversed);
-    return;
+    return reversed;
   }
 
   while (num > 0) {
@@ -50,4 +51,5 @@ void reverse_number(int num) {
     num /= 10;
   }
   printf("Reversed: %d\n", reversed);
+  return reversed;
 }
